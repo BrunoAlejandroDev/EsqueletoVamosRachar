@@ -1,6 +1,6 @@
 package com.example.constraintlayout
 
-import androidx.appcompat.app.AppCompatActivity
+import android.R
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.text.Editable
@@ -8,19 +8,32 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.widget.EditText
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import java.util.*
+
 
 class MainActivity : AppCompatActivity() , TextWatcher, TextToSpeech.OnInitListener {
     private lateinit var tts: TextToSpeech
-    private lateinit var edtConta: EditText
+    private lateinit var edtValue: EditText
+    private lateinit var edtPeople: EditText
+    private lateinit var textValue: TextView
     private var ttsSucess: Boolean = false;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        edtConta = findViewById<EditText>(R.id.edtConta)
-        edtConta.addTextChangedListener(this)
-        // Initialize TTS engine
-        tts = TextToSpeech(this, this)
+        edtValue = findViewById<EditText>(R.id.edtValue)
+        edtValue.addTextChangedListener(this)
+
+//        // Initialize TTS engine
+//        tts = TextToSpeech(this, this)
+
+        edtPeople = findViewById<EditText>(R.id.edtPeople)
+        edtPeople.addTextChangedListener(this)
+
+//        val textResult = view.findViewById(R.id.textResult)
+        textValue = findViewById<TextView>(R.id.textValue)
+//        textResult.addTextChangedListener(this)
 
     }
 
@@ -45,18 +58,9 @@ class MainActivity : AppCompatActivity() , TextWatcher, TextToSpeech.OnInitListe
         }
     }
 
-    fun clickFalar(v: View){
-        if (tts.isSpeaking) {
-            tts.stop()
-        }
-        if(ttsSucess) {
-            Log.d ("PDM23", tts.language.toString())
-            tts.speak("Oi Sumido", TextToSpeech.QUEUE_FLUSH, null, null)
-        }
-
-
-
-
+    fun clickCalcular(v: View){
+//função pra mostrar o textResult na tela
+        textValue.setText("jam")
     }
     override fun onDestroy() {
             // Release TTS engine resources
