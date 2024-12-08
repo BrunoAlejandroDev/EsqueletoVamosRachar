@@ -5,31 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <!-- TextView no topo -->
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="Esqueleto do Vamos Rachar"
+        android:layout_marginBottom="68dp"
+        android:text="Vamos Rachar"
+        android:textColor="#EE255B"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/edtValue"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="83dp"
-        android:clickable="true"
-        android:importantForAccessibility="no"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:srcCompat="?attr/actionModeShareDrawable" />
 
     <Button
         android:id="@+id/button4"
@@ -39,12 +28,15 @@
         android:contentDescription="Compre suas cartas Pokemon"
         android:onClick="compartilharTexto"
         android:text="Compartilhe!"
+        android:textColor="#FFFFFF"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintHorizontal_bias="0.735"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPeople"
-        app:layout_constraintVertical_bias="0.287" />
+        app:layout_constraintVertical_bias="0.328"
+        app:rippleColor="#6A1A1A" />
 
     <Button
         android:id="@+id/buttonSpeak"
@@ -56,10 +48,10 @@
         android:text="Escutar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPeople"
-        app:layout_constraintVertical_bias="0.287" />
+        app:layout_constraintVertical_bias="0.328" />
 
     <EditText
         android:id="@+id/edtValue"
@@ -71,9 +63,10 @@
         android:onClick="onChanceCalcular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.651"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424" />
 
     <EditText
         android:id="@+id/edtPeople"
@@ -84,20 +77,24 @@
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.651"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.587" />
+        app:layout_constraintVertical_bias="0.534" />
 
     <TextView
         android:id="@+id/textValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resultado"
+        android:text="R$ 0,00"
+        android:textColor="#575757"
+        android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPeople" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPeople"
+        app:layout_constraintVertical_bias="0.488" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
