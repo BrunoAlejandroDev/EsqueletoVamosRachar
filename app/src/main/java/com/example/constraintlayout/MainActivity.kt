@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(), TextWatcher, TextToSpeech.OnInitListen
 
                 val result = value / people
 
-                textValue.text = "Resultado: %.2f".format(result)
+                textValue.text = "R$: %.2f".format(result)
             } catch (e: NumberFormatException) {
                 textValue.text = "Por favor, insira números válidos."
             }
