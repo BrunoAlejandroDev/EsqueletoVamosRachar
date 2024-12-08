@@ -37,14 +37,29 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:contentDescription="Compre suas cartas Pokemon"
-        android:onClick="clickCalcular"
-        android:text="Calcular"
+        android:onClick="compartilharTexto"
+        android:text="Compartilhe!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.207"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPeople"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintVertical_bias="0.287" />
+
+    <Button
+        android:id="@+id/buttonSpeak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Compre suas cartas Pokemon"
+        android:onClick="clickFalar"
+        android:text="Escutar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPeople"
+        app:layout_constraintVertical_bias="0.287" />
 
     <EditText
         android:id="@+id/edtValue"
